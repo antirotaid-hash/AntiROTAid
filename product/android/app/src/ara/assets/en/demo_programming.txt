@@ -1,0 +1,23 @@
+Slide 1:
+What a function is
+Idea:
+• A function is a named piece of code that performs a specific task.
+• You can give it input information (parameters), and it can return a result.
+Example:
+• A function “area(width, height)” returns width × height.
+
+Slide 2:
+Why it is useful
+Advantages:
+• You write once what you would otherwise use many times.
+• The code becomes easier to read and check.
+• Each function has one clear responsibility.
+
+Slide 3:
+How to find an error
+What a bug is:
+• A difference between what the program should do and what it actually does.
+Steps:
+1. Reproduce the problem with the smallest possible example.
+2. Check one assumption at a time.
+3. Fix the real cause, not only the visible symptom.

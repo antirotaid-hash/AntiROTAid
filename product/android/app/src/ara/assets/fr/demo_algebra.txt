@@ -1,0 +1,25 @@
+Slide 1:
+Ce que signifie une équation
+Idée simple :
+• Une équation ressemble à une balance : le côté gauche du signe « = » a la même valeur que le côté droit.
+• La résoudre consiste à trouver le nombre inconnu qui maintient la balance en équilibre.
+Exemple :
+• Si x + 5 = 12, le nombre recherché est 7.
+
+Slide 2:
+La règle de l’équilibre
+Principe :
+• Toute opération effectuée d’un côté doit être effectuée de la même manière de l’autre côté afin de garder l’équilibre.
+Opérations autorisées :
+1. Ajouter le même nombre aux deux côtés.
+2. Soustraire le même nombre des deux côtés.
+3. Multiplier ou diviser les deux côtés par le même nombre non nul.
+
+Slide 3:
+Quand il y a des parenthèses
+Ordre :
+• Commencer par développer les parenthèses.
+• Puis regrouper les termes semblables.
+• Enfin isoler l’inconnue.
+À retenir :
+• Un signe moins devant une parenthèse change tous les signes à l’intérieur.

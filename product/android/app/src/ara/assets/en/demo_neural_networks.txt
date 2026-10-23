@@ -1,0 +1,33 @@
+Slide 1:
+What a neural network is
+In brief:
+• A model made of layers of simple computing units connected to one another.
+• Each layer takes what it receives and transforms it into a form that is more useful to the next layer.
+Key idea:
+• Several layers chained together can learn increasingly complex relationships.
+
+Slide 2:
+How the model learns
+One iteration, step by step:
+1. It receives an input and produces a prediction.
+2. It compares the prediction with the correct answer and measures the error.
+3. It slightly adjusts its internal settings so it makes a smaller error next time.
+Remember:
+• By repeating this over many examples, the model gradually approaches the right answer.
+
+Slide 3:
+Why layers help
+What each level does:
+• Early layers detect small details.
+• Middle layers combine them into larger patterns.
+• Final layers reach general, abstract ideas.
+Trade-off:
+• More layers mean more power, but also a greater risk of memorizing instead of understanding.
+
+Slide 4:
+A useful analogy
+Think of a team:
+• Each person solves a small part and passes it onward.
+• No one sees everything, but together they solve a difficult task.
+Lesson:
+• The power does not come from one brilliant unit, but from many simple units connected well.

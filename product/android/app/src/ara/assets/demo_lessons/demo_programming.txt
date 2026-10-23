@@ -1,0 +1,23 @@
+Slide 1:
+Ce este o funcție
+Idee:
+• O funcție este o bucată de cod cu nume, care face un lucru anume.
+• Îi poți da informații de intrare (parametri) și îți poate da un rezultat.
+Exemplu:
+• O funcție „arie(lățime, înălțime)" întoarce lățime × înălțime.
+
+Slide 2:
+La ce e bună
+Avantaje:
+• Scrii o singură dată ce ai folosi de mai multe ori.
+• Codul devine mai ușor de citit și de verificat.
+• Fiecare funcție are o singură treabă clară.
+
+Slide 3:
+Cum cauți o greșeală
+Ce este un bug:
+• O diferență între ce ar trebui să facă programul și ce face de fapt.
+Pași:
+1. Reproduci problema pe cel mai mic exemplu posibil.
+2. Verifici câte o presupunere pe rând.
+3. Repari cauza adevărată, nu doar simptomul vizibil.

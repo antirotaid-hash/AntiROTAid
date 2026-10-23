@@ -1,0 +1,33 @@
+Slide 1:
+Was ein neuronales Netz ist
+Kurz gesagt:
+• Ein Modell aus Schichten einfacher Recheneinheiten, die miteinander verbunden sind.
+• Jede Schicht nimmt ihre Eingaben auf und wandelt sie in eine Form um, die für die nächste Schicht nützlicher ist.
+Kernidee:
+• Mehrere hintereinandergeschaltete Schichten können immer komplexere Zusammenhänge lernen.
+
+Slide 2:
+Wie das Modell lernt
+Eine Iteration, Schritt für Schritt:
+1. Es erhält eine Eingabe und erzeugt eine Vorhersage.
+2. Es vergleicht die Vorhersage mit der richtigen Antwort und misst den Fehler.
+3. Es passt seine internen Einstellungen leicht an, damit der Fehler beim nächsten Mal kleiner wird.
+Merke:
+• Durch die Wiederholung mit vielen Beispielen nähert sich das Modell schrittweise der richtigen Antwort.
+
+Slide 3:
+Warum Schichten helfen
+Was jede Ebene leistet:
+• Die ersten Schichten erkennen kleine Details.
+• Die mittleren Schichten verbinden sie zu größeren Mustern.
+• Die letzten Schichten erfassen allgemeine, abstrakte Ideen.
+Abwägung:
+• Mehr Schichten bedeuten mehr Leistungsfähigkeit, aber auch ein höheres Risiko, nur auswendig zu lernen statt zu verstehen.
+
+Slide 4:
+Eine nützliche Analogie
+Stell dir ein Team vor:
+• Jede Person löst einen kleinen Teil und gibt ihn weiter.
+• Niemand sieht alles, doch gemeinsam lösen sie eine schwierige Aufgabe.
+Lehre:
+• Die Stärke entsteht nicht durch eine geniale Einheit, sondern durch viele einfache, gut verbundene Einheiten.

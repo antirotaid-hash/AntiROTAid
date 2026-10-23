@@ -1,0 +1,102 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <!-- windows10 target so we can use Windows.Data.Pdf to render imported PDF pages
+         natively (the same "AS-IS page" the phone shows via Android's PdfRenderer). -->
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <!-- WinForms only for the tray NotifyIcon; no Forms UI is used. -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>AntiROTAid</AssemblyName>
+    <RootNamespace>AntiROTAid.Windows</RootNamespace>
+    <Product>AntiROTAid for Windows</Product>
+    <Version>1.0.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <LangVersion>latest</LangVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <!-- Store release: do not emit AntiROTAid.pdb into the published payload. -->
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <!-- UseWindowsForms adds System.Drawing + System.Windows.Forms as global usings,
+       which collide with WPF (Application, Color, Brush...). Remove those globals;
+       TrayIcon.cs imports them explicitly where it actually needs them. -->
+  <ItemGroup>
+    <Using Remove="System.Drawing" />
+    <Using Remove="System.Windows.Forms" />
+  </ItemGroup>
+
+  <!-- Let the unit-test assembly reach the internal test seams (CourseStore.SeedForTests /
+       TestDirOverride) so the resume/completion flows can be tested without the engine. -->
+  <ItemGroup>
+    <InternalsVisibleTo Include="AntiROTAid.Windows.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\ara_wordmark.png" />
+    <Resource Include="Assets\ara_icon.png" />
+    <!-- Roboto (the phone/Android default) embedded so the Windows app renders in the
+         SAME typeface as the AAB, offline. -->
+    <Resource Include="Assets\fonts\*.ttf" />
+  </ItemGroup>
+
+  <!-- Packaged Romanian demo lessons (offline, from the ARA port pack). Copied next
+       to the exe and included in the MSIX so Courses works with no network. -->
+  <ItemGroup>
+    <Content Include="Assets\demo\*.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!-- Bundle the REAL offline engine (the same engine_ara the phone uses) next to the
+       exe: engine/ara_cli.py (host) + engine/engine_ara/mindlift (+ vendored pypdf).
+       ara_cli.py resolves this copy first (engine/engine_ara), so no dev tree needed. -->
+  <ItemGroup>
+    <AraCli Include="$(MSBuildProjectDirectory)\..\engine\ara_cli.py" />
+    <!-- Ship ONLY the runtime engine: no bytecode caches, no test suites, no pytest cache
+         (they bloat the package and put dev-only files in a Store submission). -->
+    <AraEngineSrc Include="$(MSBuildProjectDirectory)\..\..\product\engine_ara\**\*"
+                  Exclude="$(MSBuildProjectDirectory)\..\..\product\engine_ara\**\__pycache__\**;
+                           $(MSBuildProjectDirectory)\..\..\product\engine_ara\**\.pytest_cache\**;
+                           $(MSBuildProjectDirectory)\..\..\product\engine_ara\**\*.pyc;
+                           $(MSBuildProjectDirectory)\..\..\product\engine_ara\**\tests\**;
+                           $(MSBuildProjectDirectory)\..\..\product\engine_ara\**\test_*.py" />
+    <!-- Bundled embeddable CPython 3.12 runtime (python.org embed zip, extracted to
+         windows/python-embed). Makes the app self-contained for the Microsoft Store:
+         EngineBridge.PythonExe() prefers <exe>/python/python.exe over the system PATH. -->
+    <AraPython Include="$(MSBuildProjectDirectory)\..\python-embed\**\*" />
+  </ItemGroup>
+
+  <Target Name="CopyAraEngineBuild" AfterTargets="Build">
+    <PropertyGroup>
+      <AraTfmOut>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)\</AraTfmOut>
+    </PropertyGroup>
+    <Copy SourceFiles="@(AraCli)" DestinationFolder="$(AraTfmOut)engine\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(AraEngineSrc)"
+          DestinationFiles="@(AraEngineSrc->'$(AraTfmOut)engine\engine_ara\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(AraPython)"
+          DestinationFiles="@(AraPython->'$(AraTfmOut)python\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" Condition="'@(AraPython)' != ''" />
+  </Target>
+
+  <Target Name="CopyAraEnginePublish" AfterTargets="Publish">
+    <Copy SourceFiles="@(AraCli)" DestinationFolder="$(PublishDir)engine\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(AraEngineSrc)"
+          DestinationFiles="@(AraEngineSrc->'$(PublishDir)engine\engine_ara\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(AraPython)"
+          DestinationFiles="@(AraPython->'$(PublishDir)python\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" Condition="'@(AraPython)' != ''" />
+  </Target>
+
+</Project>

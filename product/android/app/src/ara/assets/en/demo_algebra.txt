@@ -1,0 +1,25 @@
+Slide 1:
+What an equation means
+Simple idea:
+• An equation is like a balance: the left side of the “=” sign has the same value as the right side.
+• Solving it means finding the hidden number that keeps the balance level.
+Example:
+• If x + 5 = 12, the number we are looking for is 7.
+
+Slide 2:
+The balance rule
+Principle:
+• Whatever operation you perform on one side, perform the same operation on the other so the balance remains level.
+Allowed moves:
+1. Add the same number to both sides.
+2. Subtract the same number from both sides.
+3. Multiply or divide both sides by the same non-zero number.
+
+Slide 3:
+When parentheses appear
+Order:
+• First expand the parentheses.
+• Then combine like terms.
+• Finally isolate the unknown.
+Remember:
+• A minus sign before parentheses changes every sign inside them.

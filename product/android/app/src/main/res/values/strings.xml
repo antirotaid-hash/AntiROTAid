@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MindLift</string>
+
+    <!-- Navigation -->
+    <string name="nav_courses">Cursuri</string>
+    <string name="nav_study">Studiu</string>
+    <string name="nav_plan">Plan</string>
+    <string name="nav_report">Raport</string>
+    <string name="nav_privacy">Confidentialitate</string>
+
+    <!-- No-shame copy. These must pass the engine copy guard too. -->
+    <string name="empty_courses">Inca nu ai cursuri. Creeaza primul curs, adauga materialul tau si pregateste cardurile local.</string>
+    <string name="import_title">Material de curs</string>
+    <string name="import_hint">Lipeste lectia, notitele sau textul extras dintr-un PDF</string>
+    <string name="action_import">Importa</string>
+    <string name="action_build_deck">Construieste deck-ul</string>
+    <string name="action_build_deck_local">Construieste deck-ul offline</string>
+    <string name="action_start_step">Incep pasul mic</string>
+    <string name="action_make_easier">Fa-l mai usor</string>
+    <string name="action_take_break">Pauza scurta</string>
+    <string name="action_later">Mai tarziu</string>
+
+        <string name="privacy_export">Salveaza backup local</string>
+    <string name="privacy_wipe">Sterge tot</string>
+    <string name="privacy_inventory">Ce e stocat</string>
+    
+    <!-- Privacy / Settings hub -->
+    <string name="privacy_policy_button">Politica de confidentialitate</string>
+    <!-- TODO(owner): inlocuieste cu URL-ul real, public si accesibil, inainte de
+         submit pe Google Play. Vezi docs/privacy-policy.html (gata de hostat). -->
+    <string name="privacy_policy_url">https://mindlift-app.github.io/privacy/privacy.html</string>
+    <string name="privacy_no_network">Aplicatia ruleaza offline pe telefon. Nu exista cont, server, chei externe, servicii online, reclame, analytics sau sincronizare. Cursurile, materialele, cardurile, progresul si datele examenelor raman in baza de date locala a aplicatiei.</string>
+    <string name="privacy_delete_local">Sterge datele locale</string>
+
+    <!-- Public product copy v16 -->
+    <string name="public_value_title">Inveti din materialul tau, fara cont</string>
+    <string name="public_value_body">Adauga textul cursului, construiesti cardurile si urmaresti progresul. Totul ruleaza local pe telefon.</string>
+    <string name="public_three_steps">1. Creezi cursul  •  2. Adaugi materialul  •  3. Studiezi cardurile</string>
+    <string name="public_offline_badge">Offline-only</string>
+    <string name="public_local_engine_badge">Motor local</string>
+    <string name="public_no_account_badge">Fara cont</string>
+
+    <!-- Owner/full-flavor attention monitor copy. Referenced by MonitorControls.kt
+         (compiled in all flavors), so these must exist even though the public/play
+         build never shows the monitor (gated behind Features.playSafe). -->
+    <string name="usage_access_title">Acces la utilizare (optional)</string>
+    <string name="usage_access_body">Cu acest acces, AntiROTAid poate observa local timpul cu atractie mare si poate oferi pasi de recuperare. Totul ramane pe telefon. Fara el, modul manual functioneaza la fel.</string>
+    <string name="overlay_access_title">Permisiune overlay (optional)</string>
+    <string name="overlay_access_body">Permite un ecran bland de recuperare peste alte aplicatii. Fara el, primesti o notificare in schimb.</string>
+    <string name="degraded_mode">Mod manual activ: unele functii sunt in pauza pana acorzi o permisiune.</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AntiROTAid brand icon background (ara flavor). Near-black to match the
+     dramatic split-brain mark (dark "rot" hemisphere -> glowing amber "aware"
+     hemisphere). The full-bleed brain foreground covers most of the surface;
+     this dark color only fills the squircle/circle corners. -->
+<resources>
+    <color name="ic_launcher_background">#07060A</color>
+</resources>

@@ -1,0 +1,33 @@
+Slide 1:
+Qu’est-ce qu’un réseau de neurones ?
+En bref :
+• Un modèle composé de couches d’unités de calcul simples reliées entre elles.
+• Chaque couche reçoit des informations et les transforme en une forme plus utile pour la couche suivante.
+Idée clé :
+• Plusieurs couches enchaînées peuvent apprendre des relations de plus en plus complexes.
+
+Slide 2:
+Comment le modèle apprend
+Une itération, étape par étape :
+1. Il reçoit une entrée et produit une prédiction.
+2. Il compare la prédiction à la bonne réponse et mesure l’erreur.
+3. Il ajuste légèrement ses paramètres internes afin de faire moins d’erreurs la fois suivante.
+À retenir :
+• En répétant ce processus sur de nombreux exemples, le modèle se rapproche progressivement de la bonne réponse.
+
+Slide 3:
+Pourquoi les couches sont utiles
+Rôle de chaque niveau :
+• Les premières couches détectent de petits détails.
+• Les couches intermédiaires les combinent en motifs plus larges.
+• Les dernières couches atteignent des idées générales et abstraites.
+Compromis :
+• Davantage de couches apporte plus de puissance, mais aussi un risque plus élevé de mémoriser au lieu de comprendre.
+
+Slide 4:
+Une analogie utile
+Imagine une équipe :
+• Chaque personne résout une petite partie et la transmet à la suivante.
+• Personne ne voit tout, mais ensemble elles accomplissent une tâche difficile.
+Leçon :
+• La puissance ne vient pas d’une unité géniale, mais de nombreuses unités simples bien reliées.

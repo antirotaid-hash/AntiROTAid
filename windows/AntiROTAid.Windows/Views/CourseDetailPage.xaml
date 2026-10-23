@@ -1,0 +1,25 @@
+<UserControl x:Class="AntiROTAid.Windows.Views.CourseDetailPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="22,18,22,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top bar: back + title + help (?) -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Style="{DynamicResource RoundIcon}" Content="←" Click="Back_Click"/>
+            <TextBlock x:Name="Title" Grid.Column="1" VerticalAlignment="Center" Margin="16,0,0,0"
+                       FontSize="24" FontWeight="Bold" TextWrapping="Wrap" Foreground="{DynamicResource AraTitle}"/>
+            <Button x:Name="HelpBtn" Grid.Column="2" Style="{DynamicResource RoundIcon}" Content="?" Click="Help_Click"/>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,14,0,0">
+            <StackPanel x:Name="Host"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

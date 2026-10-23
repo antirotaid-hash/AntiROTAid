@@ -1,0 +1,33 @@
+Slide 1:
+Qué es una red neuronal
+En pocas palabras:
+• Un modelo formado por capas de unidades de cálculo sencillas conectadas entre sí.
+• Cada capa recibe información y la transforma en una forma más útil para la siguiente.
+Idea clave:
+• Varias capas encadenadas pueden aprender relaciones cada vez más complejas.
+
+Slide 2:
+Cómo aprende el modelo
+Una iteración, paso a paso:
+1. Recibe una entrada y produce una predicción.
+2. Compara la predicción con la respuesta correcta y mide el error.
+3. Ajusta ligeramente sus parámetros internos para equivocarse menos la próxima vez.
+Recuerda:
+• Al repetir este proceso con muchos ejemplos, el modelo se acerca gradualmente a la respuesta correcta.
+
+Slide 3:
+Por qué ayudan las capas
+Qué hace cada nivel:
+• Las primeras capas detectan pequeños detalles.
+• Las capas intermedias los combinan en patrones más amplios.
+• Las capas finales alcanzan ideas generales y abstractas.
+Equilibrio:
+• Más capas significan más capacidad, pero también un mayor riesgo de memorizar en lugar de comprender.
+
+Slide 4:
+Una analogía útil
+Imagina un equipo:
+• Cada persona resuelve una pequeña parte y la pasa a la siguiente.
+• Nadie ve todo, pero juntos resuelven una tarea difícil.
+Lección:
+• La capacidad no proviene de una unidad genial, sino de muchas unidades sencillas bien conectadas.

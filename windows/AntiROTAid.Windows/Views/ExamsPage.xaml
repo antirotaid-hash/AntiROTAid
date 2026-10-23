@@ -1,0 +1,48 @@
+<UserControl x:Class="AntiROTAid.Windows.Views.ExamsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="22,18,22,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top bar -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Style="{DynamicResource RoundIcon}" Content="←" Click="Back_Click"/>
+            <TextBlock x:Name="Title" Grid.Column="1" VerticalAlignment="Center" Margin="16,0,0,0"
+                       FontSize="24" FontWeight="Bold" Foreground="{DynamicResource AraTitle}"/>
+            <Button Grid.Column="2" Style="{DynamicResource RoundIcon}" Content="?" Click="Help_Click"/>
+        </Grid>
+
+        <TextBlock x:Name="Sub" Grid.Row="1" FontSize="13" Margin="2,14,0,0" Foreground="{DynamicResource AraMuted}"/>
+
+        <Border Grid.Row="2" CornerRadius="16" Padding="16" Margin="0,16,0,0"
+                Background="{DynamicResource AraGlassGradient}"
+                BorderBrush="{DynamicResource AraGlassEdgeGreen}" BorderThickness="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="NameBox" Width="300" Height="40" FontSize="14" Padding="10,8"
+                         VerticalContentAlignment="Center"
+                         Background="{DynamicResource AraGreenSoft}" Foreground="{DynamicResource AraTitle}"
+                         CaretBrush="{DynamicResource AraTitle}" BorderBrush="{DynamicResource AraGlassEdgeGreen}"/>
+                <DatePicker x:Name="DateBox" Width="150" Height="40" Margin="10,0,0,0" FontSize="14"
+                            Background="{DynamicResource AraGreenSoft}" Foreground="{DynamicResource AraTitle}"
+                            BorderBrush="{DynamicResource AraGlassEdgeGreen}"/>
+                <TextBox x:Name="TimeBox" Width="70" Height="40" Margin="8,0,0,0" FontSize="14" Padding="8"
+                         Text="09:00" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                         Background="{DynamicResource AraGreenSoft}" Foreground="{DynamicResource AraTitle}"
+                         CaretBrush="{DynamicResource AraTitle}" BorderBrush="{DynamicResource AraGlassEdgeGreen}"/>
+                <Button x:Name="AddBtn" Style="{StaticResource AraPrimaryBtn}" Width="140" Height="40" Margin="10,0,0,0" Click="Add_Click"/>
+            </StackPanel>
+        </Border>
+
+        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto" Margin="0,16,0,0">
+            <StackPanel x:Name="List"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

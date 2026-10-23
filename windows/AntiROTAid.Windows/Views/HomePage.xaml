@@ -1,0 +1,149 @@
+<UserControl x:Class="AntiROTAid.Windows.Views.HomePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <!-- Outlined gold pill (Settings / Guide / Info). -->
+        <Style x:Key="Pill" TargetType="Button">
+            <Setter Property="Foreground" Value="{DynamicResource AraGreen}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Height" Value="52"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="b" CornerRadius="14" BorderThickness="1"
+                                BorderBrush="{DynamicResource AraGlassEdgeGreen}"
+                                Background="{DynamicResource AraGlassGradient}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="b" Property="Background" Value="{DynamicResource AraGreenSoft}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="22,20,22,22">
+        <StackPanel>
+
+            <!-- Header: ARA wordmark + AntiROTAid -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Image Source="/Assets/ara_wordmark.png" Height="38" VerticalAlignment="Center"/>
+                <TextBlock VerticalAlignment="Center" Margin="12,0,0,0" FontSize="24" FontWeight="Bold">
+                    <Run Text="AntiROTA" Foreground="{DynamicResource AraTitle}"/><Run Text="id" Foreground="{DynamicResource AraGreen}"/>
+                </TextBlock>
+            </StackPanel>
+
+            <!-- Settings / Guide / Info pills -->
+            <Grid Margin="0,18,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/><ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/><ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="SettingsPill" Grid.Column="0" Style="{StaticResource Pill}" Click="Settings_Click"/>
+                <Button x:Name="GuidePill"    Grid.Column="2" Style="{StaticResource Pill}" Click="Guide_Click"/>
+                <Button x:Name="InfoPill"     Grid.Column="4" Style="{StaticResource Pill}" Click="Info_Click"/>
+            </Grid>
+
+            <!-- Tagline + hero -->
+            <TextBlock x:Name="Tagline" FontSize="15" Margin="2,22,0,0" Foreground="{DynamicResource AraMuted}"/>
+            <TextBlock x:Name="Hero" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" LineHeight="38"
+                       Foreground="{DynamicResource AraTitle}" Margin="0,10,0,0"/>
+            <TextBlock x:Name="HeroBody" FontSize="15" TextWrapping="Wrap" LineHeight="23"
+                       Foreground="{DynamicResource AraBody}" Margin="0,14,0,0"/>
+
+            <!-- AntiROTAid Mode toggle: gold "Start" when off, red "Stop" when on
+                 (single button, ports the phone's OverlayControl toggle). -->
+            <Border x:Name="StartCard" CornerRadius="22" Margin="0,22,0,0" Padding="26,18" Cursor="Hand"
+                    BorderBrush="{DynamicResource AraGlassEdgeGreen}" BorderThickness="1"
+                    Background="{DynamicResource AraBrush}" MouseLeftButtonUp="Start_Click">
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock x:Name="StartTitle" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"
+                               Foreground="#FF16110A"/>
+                    <TextBlock x:Name="StartSub" FontSize="12" FontWeight="SemiBold" TextWrapping="Wrap"
+                               TextAlignment="Center" Foreground="#FF372400" Margin="0,4,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <!-- My exams -->
+            <Border CornerRadius="20" Margin="0,18,0,0" Padding="16" Cursor="Hand"
+                    Background="{DynamicResource AraGlassGradient}"
+                    BorderBrush="{DynamicResource AraGlassEdgeGreen}" BorderThickness="1"
+                    MouseLeftButtonUp="Exams_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- calendar icon -->
+                    <Border Grid.Column="0" Width="56" Height="56" CornerRadius="14"
+                            BorderBrush="{DynamicResource AraGlassEdgeGreen}" BorderThickness="1.5"
+                            Background="{DynamicResource AraGreenSoft}" VerticalAlignment="Center">
+                        <Grid Width="26" Height="24">
+                            <Border CornerRadius="4" BorderBrush="{DynamicResource AraGreen}" BorderThickness="2"/>
+                            <Rectangle Height="2" VerticalAlignment="Top" Margin="0,7,0,0" Fill="{DynamicResource AraGreen}"/>
+                            <Path Data="M -4,1 L -1,4 L 5,-3" Stroke="{DynamicResource AraGreen}" StrokeThickness="2"
+                                  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,4,0,0"/>
+                        </Grid>
+                    </Border>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="16,0,0,0">
+                        <TextBlock x:Name="ExamsTitle" FontSize="19" FontWeight="Bold" Foreground="{DynamicResource AraTitle}"/>
+                        <TextBlock x:Name="ExamsSub" FontSize="12" Margin="0,3,0,0" TextWrapping="Wrap"
+                                   Foreground="{DynamicResource AraMuted}"/>
+                    </StackPanel>
+                    <Border Grid.Column="2" CornerRadius="10" BorderThickness="1" Padding="14,7" VerticalAlignment="Center"
+                            BorderBrush="{DynamicResource AraGlassEdgeGreen}">
+                        <TextBlock x:Name="ExamsOpen" FontWeight="Bold" FontSize="13" Foreground="{DynamicResource AraGreen}"/>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- My courses -->
+            <Border CornerRadius="20" Margin="0,14,0,0" Padding="16" Cursor="Hand"
+                    Background="{DynamicResource AraGlassGradient}"
+                    BorderBrush="{DynamicResource AraGlassEdgeGreen}" BorderThickness="1"
+                    MouseLeftButtonUp="Courses_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- stack icon -->
+                    <Border Grid.Column="0" Width="56" Height="56" CornerRadius="14"
+                            BorderBrush="{DynamicResource AraGlassEdgeGreen}" BorderThickness="1.5"
+                            Background="{DynamicResource AraGreenSoft}" VerticalAlignment="Center">
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Border Width="26" Height="6" CornerRadius="3" Background="{DynamicResource AraGreen}"/>
+                            <Border Width="26" Height="6" CornerRadius="3" Margin="0,4,0,0" Background="{DynamicResource AraGreen}"/>
+                            <Border Width="26" Height="6" CornerRadius="3" Margin="0,4,0,0" Background="{DynamicResource AraGreen}"/>
+                        </StackPanel>
+                    </Border>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="16,0,0,0">
+                        <TextBlock x:Name="CoursesTitle" FontSize="19" FontWeight="Bold" Foreground="{DynamicResource AraTitle}"/>
+                        <TextBlock x:Name="CoursesSub" FontSize="12" Margin="0,3,0,0" TextWrapping="Wrap"
+                                   Foreground="{DynamicResource AraMuted}"/>
+                    </StackPanel>
+                    <Border Grid.Column="2" CornerRadius="10" BorderThickness="1" Padding="14,7" VerticalAlignment="Center"
+                            BorderBrush="{DynamicResource AraGlassEdgeGreen}">
+                        <TextBlock x:Name="CoursesOpen" FontWeight="Bold" FontSize="13" Foreground="{DynamicResource AraGreen}"/>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- Chips -->
+            <StackPanel Orientation="Horizontal" Margin="2,24,0,0">
+                <TextBlock x:Name="Chip1" FontSize="13" Foreground="{DynamicResource AraGreen}" FontWeight="SemiBold"/>
+                <TextBlock Text="    " FontSize="13"/>
+                <TextBlock x:Name="Chip2" FontSize="13" Foreground="{DynamicResource AraGreen}" FontWeight="SemiBold"/>
+                <TextBlock Text="    " FontSize="13"/>
+                <TextBlock x:Name="Chip3" FontSize="13" Foreground="{DynamicResource AraGreen}" FontWeight="SemiBold"/>
+            </StackPanel>
+            <TextBlock x:Name="Footer" FontSize="12" Foreground="{DynamicResource AraMuted}" Margin="2,8,0,0"
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AntiROTAid (ARA) public app name. Overrides the main MindLift label
+         only for the `ara` flavor (app.antirotaid). -->
+    <string name="app_name">AntiROTAid</string>
+
+    <!-- Rebranded privacy copy for the public AntiROTAid build. -->
+    <string name="privacy_no_network">AntiROTAid ruleaza offline pe telefon. Nu exista cont, server, chei externe, servicii online, reclame, analytics sau sincronizare. Cursurile, materialele, cardurile, progresul si datele examenelor raman in baza de date locala a aplicatiei.</string>
+
+    <!-- Public AntiROTAid privacy policy (hosted on Netlify). -->
+    <string name="privacy_policy_url">https://antirotaid.netlify.app/privacy-policy/</string>
+</resources>

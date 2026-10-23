@@ -1,0 +1,25 @@
+Slide 1:
+Qué significa una ecuación
+Idea sencilla:
+• Una ecuación es como una balanza: el lado izquierdo del signo «=» tiene el mismo valor que el lado derecho.
+• Resolverla significa encontrar el número desconocido que mantiene la balanza equilibrada.
+Ejemplo:
+• Si x + 5 = 12, el número que buscamos es 7.
+
+Slide 2:
+La regla del equilibrio
+Principio:
+• Cualquier operación que hagas en un lado debes hacerla de la misma manera en el otro para que la balanza siga equilibrada.
+Movimientos permitidos:
+1. Sumar el mismo número a ambos lados.
+2. Restar el mismo número de ambos lados.
+3. Multiplicar o dividir ambos lados por el mismo número distinto de cero.
+
+Slide 3:
+Cuando aparecen paréntesis
+Orden:
+• Primero desarrolla los paréntesis.
+• Después combina los términos semejantes.
+• Por último, aísla la incógnita.
+Recuerda:
+• Un signo menos delante de un paréntesis cambia todos los signos de su interior.

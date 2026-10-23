@@ -1,0 +1,37 @@
+# Signing material and local secrets: never commit
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.cer
+keystore.properties
+local.properties
+.env
+.env.*
+
+# Gradle / Android build output
+.gradle/
+build/
+.idea/
+*.iml
+captures/
+.cxx/
+.externalNativeBuild/
+product/engine_ara_runtime/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# .NET build output and packaging
+bin/
+obj/
+*.user
+windows/dist/
+windows/python-embed/
+*.msix
+
+# OS
+.DS_Store
+Thumbs.db

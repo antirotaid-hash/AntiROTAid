@@ -1,0 +1,25 @@
+Slide 1:
+Ce înseamnă o ecuație
+Idee simplă:
+• O ecuație este ca o balanță: partea din stânga semnului „=" valorează cât partea din dreapta.
+• A rezolva înseamnă a afla numărul ascuns care ține balanța în echilibru.
+Exemplu:
+• Dacă x + 5 = 12, numărul căutat este 7.
+
+Slide 2:
+Regula echilibrului
+Principiu:
+• Orice operație faci pe o parte, o faci identic și pe cealaltă, ca balanța să rămână dreaptă.
+Mișcări permise:
+1. Aduni același număr de ambele părți.
+2. Scazi același număr de ambele părți.
+3. Înmulțești sau împarți ambele părți cu același număr diferit de zero.
+
+Slide 3:
+Când apar paranteze
+Ordinea:
+• Întâi desfaci parantezele.
+• Apoi aduni termenii care seamănă între ei.
+• La final izolezi necunoscuta.
+De reținut:
+• Un minus în fața parantezei schimbă fiecare semn dinăuntru.

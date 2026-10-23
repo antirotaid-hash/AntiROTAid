@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Calm, low-arousal palette. No alarming reds for risk — risk uses warm
+         amber at most, in keeping with the no-shame tone. -->
+    <color name="ml_background">#FAF7F2</color>
+    <color name="ml_surface">#FFFFFF</color>
+    <color name="ml_primary">#3E6D5C</color>
+    <color name="ml_on_primary">#FFFFFF</color>
+    <color name="ml_accent">#C7A86B</color>
+    <color name="ml_text">#2B2B2B</color>
+</resources>

@@ -1,0 +1,23 @@
+Slide 1:
+Qu’est-ce qu’une fonction ?
+Idée :
+• Une fonction est un bloc de code nommé qui accomplit une tâche précise.
+• On peut lui fournir des informations d’entrée (paramètres), et elle peut renvoyer un résultat.
+Exemple :
+• Une fonction « aire(largeur, hauteur) » renvoie largeur × hauteur.
+
+Slide 2:
+À quoi sert-elle ?
+Avantages :
+• On n’écrit qu’une seule fois ce que l’on utiliserait plusieurs fois.
+• Le code devient plus facile à lire et à vérifier.
+• Chaque fonction possède une responsabilité claire et unique.
+
+Slide 3:
+Comment rechercher une erreur
+Qu’est-ce qu’un bug ?
+• Une différence entre ce que le programme devrait faire et ce qu’il fait réellement.
+Étapes :
+1. Reproduire le problème avec le plus petit exemple possible.
+2. Vérifier une hypothèse à la fois.
+3. Corriger la véritable cause, et pas seulement le symptôme visible.

@@ -1,0 +1,25 @@
+Slide 1:
+Was eine Gleichung bedeutet
+Einfache Idee:
+• Eine Gleichung ist wie eine Waage: Die linke Seite des „=“-Zeichens hat denselben Wert wie die rechte Seite.
+• Lösen bedeutet, die unbekannte Zahl zu finden, die die Waage im Gleichgewicht hält.
+Beispiel:
+• Wenn x + 5 = 12 gilt, ist die gesuchte Zahl 7.
+
+Slide 2:
+Die Gleichgewichtsregel
+Grundsatz:
+• Jede Rechenoperation auf einer Seite muss genauso auf der anderen Seite ausgeführt werden, damit die Waage im Gleichgewicht bleibt.
+Erlaubte Schritte:
+1. Auf beiden Seiten dieselbe Zahl addieren.
+2. Auf beiden Seiten dieselbe Zahl subtrahieren.
+3. Beide Seiten mit derselben von null verschiedenen Zahl multiplizieren oder durch sie dividieren.
+
+Slide 3:
+Wenn Klammern vorkommen
+Reihenfolge:
+• Zuerst die Klammern auflösen.
+• Dann gleichartige Terme zusammenfassen.
+• Zum Schluss die Unbekannte isolieren.
+Merke:
+• Ein Minuszeichen vor einer Klammer ändert jedes Vorzeichen in der Klammer.

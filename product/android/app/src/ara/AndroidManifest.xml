@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  AntiROTAid (flavor: ara) — applicationId app.antirotaid.
+
+  V1 = local/offline Study Mode + a manual, opt-in AntiROTAid overlay:
+    - SYSTEM_ALERT_WINDOW  : show short study cards over other apps while the
+                             user has manually enabled AntiROTAid Mode. Every
+                             card has Exit; the mode has a Stop control.
+    - FOREGROUND_SERVICE(+ specialUse) / POST_NOTIFICATIONS : the mode runs as a
+                             foreground service with a persistent Stop notification.
+
+  Deliberately ABSENT (AntiROTAid V1 spec):
+    - INTERNET / network          : nothing leaves the device.
+    - PACKAGE_USAGE_STATS         : no app-usage monitoring.
+    - Accessibility Service       : not used in V1.
+  The overlay is never triggered by detecting other apps — only by the user's
+  own interval while the mode is on.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application>
+        <!-- AntiROTAid local study flow (lesson list + card feed). MainActivity
+             routes here at launch in the ara flavor. -->
+        <activity
+            android:name=".ara.AraStudyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MindLift" />
+
+        <activity
+            android:name=".overlay.OverlayActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.MindLift.Overlay" />
+
+        <service
+            android:name=".overlay.OverlayWindowService"
+            android:exported="false" />
+
+        <service
+            android:name=".ara.AraModeService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="User-enabled study-card overlay reminder while AntiROTAid Mode is on." />
+        </service>
+    </application>
+</manifest>

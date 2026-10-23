@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Compose drives the real theming (see ui/theme). These XML themes only
+         set the window background + status bar so launch is calm. -->
+    <style name="Theme.MindLift" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/ml_background</item>
+        <item name="android:statusBarColor">@color/ml_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Overlay window: transparent so the Compose surface controls the look. -->
+    <style name="Theme.MindLift.Overlay" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

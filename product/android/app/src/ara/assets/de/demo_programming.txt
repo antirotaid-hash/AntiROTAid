@@ -1,0 +1,23 @@
+Slide 1:
+Was eine Funktion ist
+Idee:
+• Eine Funktion ist ein benannter Codeabschnitt, der eine bestimmte Aufgabe erfüllt.
+• Man kann ihr Eingabewerte (Parameter) übergeben, und sie kann ein Ergebnis zurückgeben.
+Beispiel:
+• Eine Funktion „fläche(breite, höhe)“ gibt breite × höhe zurück.
+
+Slide 2:
+Wozu sie nützlich ist
+Vorteile:
+• Was mehrfach gebraucht wird, muss nur einmal geschrieben werden.
+• Der Code lässt sich leichter lesen und prüfen.
+• Jede Funktion hat eine einzige, klar abgegrenzte Aufgabe.
+
+Slide 3:
+Wie man einen Fehler findet
+Was ein Bug ist:
+• Ein Unterschied zwischen dem, was das Programm tun sollte, und dem, was es tatsächlich tut.
+Schritte:
+1. Das Problem mit dem kleinstmöglichen Beispiel reproduzieren.
+2. Jeweils eine Annahme nach der anderen prüfen.
+3. Die tatsächliche Ursache beheben, nicht nur das sichtbare Symptom.

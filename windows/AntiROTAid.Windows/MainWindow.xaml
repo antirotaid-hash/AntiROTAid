@@ -1,0 +1,19 @@
+<Window x:Class="AntiROTAid.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AntiROTAid"
+        Width="768" Height="940" MinWidth="720" MinHeight="700"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="{StaticResource AppFont}"
+        Background="{DynamicResource AraBgGradient}">
+    <!-- Single-column phone-style shell: one page at a time, back-stack navigation.
+         The coach-mark walkthrough overlays on top of ContentHost inside RootGrid.
+         Content is capped to a readable column width and centered, so maximizing or
+         running on a wide monitor keeps the phone-style layout instead of stretching;
+         every page scrolls internally, so a short window never clips. -->
+    <Grid x:Name="RootGrid">
+        <ContentControl x:Name="ContentHost"
+                        HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                        MaxWidth="900"/>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+Slide 1:
+Ce este o rețea neuronală
+Pe scurt:
+• Un model alcătuit din straturi de unități simple de calcul, legate între ele.
+• Fiecare strat ia ce primește și îl transformă într-o formă mai utilă pentru următorul.
+Idee cheie:
+• Mai multe straturi puse în lanț pot învăța relații tot mai complicate.
+
+Slide 2:
+Cum învață modelul
+O iterație, pas cu pas:
+1. Primește o intrare și produce o predicție.
+2. Compară predicția cu răspunsul corect și măsoară greșeala.
+3. Ajustează ușor reglajele interne ca data viitoare să greșească mai puțin.
+De reținut:
+• Repetând asta pe multe exemple, modelul se apropie treptat de răspunsul bun.
+
+Slide 3:
+De ce ajută straturile
+Ce face fiecare nivel:
+• Straturile de la început prind detalii mărunte.
+• Cele din mijloc le combină în tipare mai mari.
+• Cele finale ajung la idei generale, abstracte.
+Compromis:
+• Mai multe straturi = mai multă putere, dar și risc de a memora în loc să înțeleagă.
+
+Slide 4:
+O analogie utilă
+Gândește-te la o echipă:
+• Fiecare persoană rezolvă o bucată mică și o trimite mai departe.
+• Nimeni nu vede tot, dar împreună rezolvă o sarcină grea.
+Morală:
+• Puterea nu vine dintr-o unitate genială, ci din multe unități simple bine legate.
