@@ -10,7 +10,6 @@ project with no funding.
 - Website: <https://antirotaid.netlify.app/>
 - Google Play (Android): <https://play.google.com/store/apps/details?id=app.antirotaid>
 - Microsoft Store (Windows): <https://apps.microsoft.com/detail/9NL967H7JLVN>
-- Demo video: *link to be added*
 - Contact: antirotaid@gmail.com
 
 ## What it does
@@ -55,7 +54,7 @@ this source code.
 | Android app on Google Play | Published |
 | Windows app 1.0.0 | Published on the Microsoft Store. Source in `windows/`. |
 | Card engine | 24 automated tests pass |
-| In progress | *to be completed* |
+| Known issues, in progress | A PDF title that spans two lines can be split across a card heading and its first line. After switching an exam to a fixed number of minutes between cards, the exam's "Plan" line can still show the previous pace. |
 
 ## Repository layout
 
@@ -124,7 +123,32 @@ dotnet run -c Debug
 
 ## How it was built
 
-*To be completed with the author.*
+**My role: product and user experience.** I decided what problem the app
+solves, how it should look and how it should behave. While designing, I put
+myself in the place of the student using it: what they see first, what they
+tap, when a card should appear and how they get rid of it. I described those
+flows and screens in detail, tried every build on a phone, and asked for
+changes until the app behaved the way I had in mind. I also decided what to
+leave out. The project started as a much broader prototype (see
+`DEVELOPMENT_LOG.md`), and most of it was dropped to keep the app simple and
+private.
+
+**The code was written with AI coding assistants.** Most of it was written by
+Claude Code (Anthropic) from my descriptions. Some UI passes in June 2026 came
+from ChatGPT (OpenAI). The commit messages in `DEVELOPMENT_LOG.md` show where.
+I did not write most of the code line by line. My work was the design, the
+direction, the testing and the decisions.
+
+**Testing.**
+1. On my own phone, after every build.
+2. On my family's phones, to see how people who had not built the app use it.
+3. Through Google Play closed testing, before the public release.
+
+Automated tests also cover the card engine (24 tests) and the Android app's
+resume and cleanup logic (17 tests).
+
+**Releases.** I published the app on Google Play (Android) and the Microsoft
+Store (Windows) and kept it updated, from 1.0.0 to 1.0.7.
 
 ## Credits
 
