@@ -79,12 +79,13 @@ therefore behaves the same on both platforms.
 The overlay is drawn by `OverlayWindowService`. `AraModeService` runs it as a
 foreground service and spaces the cards from the exam plan.
 
-Some package and class names still say `mindlift` (for example
-`com.mindlift`), because the project started as a broader prototype with that
-name. `product/android/app/src/main` also still contains prototype code that
-the published app does not use: an app-usage monitor and related screens.
-The published app's manifest declares none of the components or permissions
-that code would need. See `DEVELOPMENT_LOG.md`.
+Some package and class names say `mindlift` (for example `com.mindlift`).
+MindLift is the working name of a planned, broader version of the same idea
+for other areas beyond studying. The codebase is shared, so
+`product/android/app/src/main` also contains code for that version which
+AntiROTAid does not use (an app-usage monitor and related screens). The
+published app's manifest declares none of the components or permissions that
+code would need.
 
 ## Build and run
 
@@ -128,10 +129,7 @@ solves, how it should look and how it should behave. While designing, I put
 myself in the place of the student using it: what they see first, what they
 tap, when a card should appear and how they get rid of it. I described those
 flows and screens in detail, tried every build on a phone, and asked for
-changes until the app behaved the way I had in mind. I also decided what to
-leave out. The project started as a much broader prototype (see
-`DEVELOPMENT_LOG.md`), and most of it was dropped to keep the app simple and
-private.
+changes until the app behaved the way I had in mind.
 
 **The code was written with AI coding assistants.** Most of it was written by
 Claude Code (Anthropic) from my descriptions. Some UI passes in June 2026 came
@@ -148,7 +146,7 @@ Automated tests also cover the card engine (24 tests) and the Android app's
 resume and cleanup logic (17 tests).
 
 **Releases.** I published the app on Google Play (Android) and the Microsoft
-Store (Windows) and kept it updated, from 1.0.0 to 1.0.7.
+Store (Windows) and kept it updated through several releases.
 
 ## Credits
 

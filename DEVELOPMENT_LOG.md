@@ -1,14 +1,14 @@
 # Development log
 
-This is the commit history of the private working repository in which AntiROTAid was built, copied here verbatim (date, short commit id, message). The private repository is not published because its history contains build secrets and an earlier prototype; this public repository starts from a clean snapshot of release 1.0.7.
+This is the commit history of the private working repository in which AntiROTAid was built, copied here verbatim (date, short commit id, message). The private repository is not published because its history contains build secrets; this public repository starts from a clean snapshot of release 1.0.7.
 
 Commit messages are the original ones and are left unedited, including references to the AI assistants used during development (see the README, section *How it was built*).
 
 Total: 91 commits, 2026-05-25 → 2026-10-10.
 
-## Phase 1 — MindLift prototype (May 25 – Jun 13, 2026)
+## Phase 1 — Card engine and shared codebase (May 25 – Jun 13, 2026)
 
-AntiROTAid grew out of an earlier, broader prototype called MindLift: an offline Python engine that turns course material into study cards, plus many experimental "anti-doomscrolling" features. Most of those experiments were later dropped and are not part of the published app or of this repository.
+The offline Python engine that turns course material into study cards, plus features for MindLift, the working name of a planned broader version of the same idea for other areas beyond studying. Those MindLift features are not part of AntiROTAid or of this repository.
 
 | Date | Commit | Message |
 |---|---|---|
@@ -43,7 +43,7 @@ AntiROTAid grew out of an earlier, broader prototype called MindLift: an offline
 
 ## Phase 2 — AntiROTAid takes shape (Jun 16 – Jun 27, 2026)
 
-The product was narrowed to one idea: your own materials, as short cards, shown over other apps only when you turn the mode on yourself. A lean engine (`engine_ara`) and a separate Android flavor (`ara`) were created, then iterated on real-device testing.
+The AntiROTAid app itself: your own materials, as short cards, shown over other apps only when you turn the mode on yourself. A lean engine (`engine_ara`) and a separate Android flavor (`ara`) were created, then iterated on real-device testing.
 
 | Date | Commit | Message |
 |---|---|---|
