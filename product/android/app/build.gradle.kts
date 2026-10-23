@@ -75,9 +75,9 @@ android {
     }
 
     // Public repository: only the `ara` distribution (the app published as
-    // AntiROTAid) is kept. The project began as an internal prototype with two
-    // more flavors (`full`, `play`); those and their engine were left out of
-    // this repository.
+    // AntiROTAid) is kept. The shared codebase also has `full` and `play`
+    // flavors for MindLift, a planned broader version; those and their engine
+    // were left out of this repository.
     flavorDimensions += "distribution"
     productFlavors {
         // AntiROTAid (ARA): the public, Play-safe study UI PLUS a manual,
